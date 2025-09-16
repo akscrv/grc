@@ -22,7 +22,10 @@ import {
   Home,
   Star,
   Award,
-  Users
+  Users,
+  Settings,
+  Users2,
+  Timer
 } from 'lucide-react';
 import './App.css';
 
@@ -32,7 +35,7 @@ function App() {
   const sections = [
     { id: 'landing', label: 'About', icon: Home },
     { id: 'features', label: 'Features', icon: Star },
-    { id: 'certifications', label: 'Certifications', icon: Award },
+    { id: 'certifications', label: 'Frameworks', icon: Award },
     { id: 'industries', label: 'Industries', icon: Users }
   ];
 
@@ -217,7 +220,7 @@ function App() {
                   <div className="feature-icon">
                     <Shield />
                   </div>
-                  <h3>Risk Dashboard</h3>
+                  <h3>Custom Audit Dashboard</h3>
                   <p>Real-time visibility into compliance risks with predictive analytics and alerts.</p>
                 </div>
                 <div className="feature-card">
@@ -229,10 +232,10 @@ function App() {
                 </div>
                 <div className="feature-card">
                   <div className="feature-icon">
-                    <Database />
+                    <Users2 />
                   </div>
-                  <h3>Data Integrations</h3>
-                  <p>Connect SCADA, ERP, IoT sensors, and other systems for comprehensive data visibility.</p>
+                  <h3>Team Collaboration & Task Auditing</h3>
+                  <p>Streamline team workflows with collaborative tools and comprehensive task auditing capabilities.</p>
                 </div>
                 <div className="feature-card">
                   <div className="feature-icon">
@@ -279,94 +282,157 @@ function App() {
           {/* Certifications Section */}
           {activeSection === 'certifications' && (
             <div className="section-content certifications-section">
-              <div className="section-header">
-                <h2 className="section-title">Certifications & Regulatory Compliance</h2>
-                <p className="section-subtitle">
+              <div className="certifications-hero">
+                <div className="hero-badge">
+                  <Award className="badge-icon" />
+                  <span>Compliance Excellence</span>
+                </div>
+                <h1 className="hero-title">Certifications & Regulatory Compliance</h1>
+                <p className="hero-subtitle">
                   Comprehensive coverage of energy industry standards and regulations
                 </p>
               </div>
-              <div className="certifications-grid">
-                <div className="cert-category">
-                  <h3>Safety Standards</h3>
-                  <div className="cert-list">
-                    <div className="cert-item">
-                      <Award className="cert-icon" />
-                      <span>ISO 45001 - Occupational Health & Safety</span>
-                    </div>
-                    <div className="cert-item">
-                      <Award className="cert-icon" />
-                      <span>OSHA 29 CFR 1910 - General Industry</span>
-                    </div>
-                    <div className="cert-item">
-                      <Award className="cert-icon" />
-                      <span>API RP 75 - Offshore Safety</span>
-                    </div>
-                    <div className="cert-item">
-                      <Award className="cert-icon" />
-                      <span>NFPA 70E - Electrical Safety</span>
-                    </div>
+
+              <div className="frameworks-showcase">
+                <div className="showcase-header">
+                  <h2 className="showcase-title">Supported Compliance Frameworks</h2>
+                  <div className="showcase-subtitle">Trusted by industry leaders</div>
+                </div>
+                <div className="frameworks-masonry">
+                  <div className="framework-card primary">
+                    <div className="card-glow"></div>
+                    <Shield className="framework-icon" />
+                    <h3>HSE Audits</h3>
+                    <p>Health, Safety & Environment</p>
+                  </div>
+                  <div className="framework-card secondary">
+                    <div className="card-glow"></div>
+                    <CheckCircle className="framework-icon" />
+                    <h3>ISO Standards</h3>
+                    <p>International Standards</p>
+                  </div>
+                  <div className="framework-card tertiary">
+                    <div className="card-glow"></div>
+                    <Database className="framework-icon" />
+                    <h3>SOC Compliance</h3>
+                    <p>Service Organization Control</p>
+                  </div>
+                  <div className="framework-card primary">
+                    <div className="card-glow"></div>
+                    <Settings className="framework-icon" />
+                    <h3>SOX Requirements</h3>
+                    <p>Sarbanes-Oxley Act</p>
+                  </div>
+                  <div className="framework-card secondary">
+                    <div className="card-glow"></div>
+                    <Users2 className="framework-icon" />
+                    <h3>GDPR Protection</h3>
+                    <p>Data Privacy Regulation</p>
+                  </div>
+                  <div className="framework-card tertiary">
+                    <div className="card-glow"></div>
+                    <Timer className="framework-icon" />
+                    <h3>Custom Frameworks</h3>
+                    <p>Tailored Solutions</p>
                   </div>
                 </div>
-                <div className="cert-category">
-                  <h3>Environmental Standards</h3>
-                  <div className="cert-list">
-                    <div className="cert-item">
-                      <Award className="cert-icon" />
-                      <span>ISO 14001 - Environmental Management</span>
-                    </div>
-                    <div className="cert-item">
-                      <Award className="cert-icon" />
-                      <span>EPA Clean Air Act</span>
-                    </div>
-                    <div className="cert-item">
-                      <Award className="cert-icon" />
-                      <span>Clean Water Act</span>
-                    </div>
-                    <div className="cert-item">
-                      <Award className="cert-icon" />
-                      <span>RCRA - Waste Management</span>
+              </div>
+
+              <div className="regulatory-showcase">
+                <div className="showcase-header">
+                  <h2 className="showcase-title">Regulatory Bodies We Work With</h2>
+                  <div className="showcase-subtitle">13+ Federal Agencies & Commissions</div>
+                </div>
+                <div className="regulatory-masonry">
+                  <div className="regulatory-card featured">
+                    <div className="card-number">01</div>
+                    <div className="card-content">
+                      <div className="regulatory-acronym">OSHA</div>
+                      <div className="regulatory-name">Occupational Safety and Health Administration</div>
                     </div>
                   </div>
-                </div>
-                <div className="cert-category">
-                  <h3>Quality & Process</h3>
-                  <div className="cert-list">
-                    <div className="cert-item">
-                      <Award className="cert-icon" />
-                      <span>ISO 9001 - Quality Management</span>
-                    </div>
-                    <div className="cert-item">
-                      <Award className="cert-icon" />
-                      <span>API Q1 - Quality for Oil & Gas</span>
-                    </div>
-                    <div className="cert-item">
-                      <Award className="cert-icon" />
-                      <span>ISO 50001 - Energy Management</span>
-                    </div>
-                    <div className="cert-item">
-                      <Award className="cert-icon" />
-                      <span>ASME BPVC - Pressure Vessels</span>
+                  <div className="regulatory-card">
+                    <div className="card-number">02</div>
+                    <div className="card-content">
+                      <div className="regulatory-acronym">FCC</div>
+                      <div className="regulatory-name">Federal Communications Commission</div>
                     </div>
                   </div>
-                </div>
-                <div className="cert-category">
-                  <h3>Industry Specific</h3>
-                  <div className="cert-list">
-                    <div className="cert-item">
-                      <Award className="cert-icon" />
-                      <span>API 1169 - Pipeline Inspector</span>
+                  <div className="regulatory-card">
+                    <div className="card-number">03</div>
+                    <div className="card-content">
+                      <div className="regulatory-acronym">EEOC</div>
+                      <div className="regulatory-name">Equal Employment Opportunity Commission</div>
                     </div>
-                    <div className="cert-item">
-                      <Award className="cert-icon" />
-                      <span>NERC CIP - Critical Infrastructure</span>
+                  </div>
+                  <div className="regulatory-card featured">
+                    <div className="card-number">04</div>
+                    <div className="card-content">
+                      <div className="regulatory-acronym">EPA</div>
+                      <div className="regulatory-name">Environmental Protection Agency</div>
                     </div>
-                    <div className="cert-item">
-                      <Award className="cert-icon" />
-                      <span>DOT 49 CFR - Transportation</span>
+                  </div>
+                  <div className="regulatory-card">
+                    <div className="card-number">05</div>
+                    <div className="card-content">
+                      <div className="regulatory-acronym">SEC</div>
+                      <div className="regulatory-name">Securities Exchange Commission</div>
                     </div>
-                    <div className="cert-item">
-                      <Award className="cert-icon" />
-                      <span>FERC - Federal Energy Regulatory</span>
+                  </div>
+                  <div className="regulatory-card">
+                    <div className="card-number">06</div>
+                    <div className="card-content">
+                      <div className="regulatory-acronym">CSB</div>
+                      <div className="regulatory-name">Chemical Safety and Hazard Investigation Board</div>
+                    </div>
+                  </div>
+                  <div className="regulatory-card featured">
+                    <div className="card-number">07</div>
+                    <div className="card-content">
+                      <div className="regulatory-acronym">FERC</div>
+                      <div className="regulatory-name">Federal Energy Regulatory Commission</div>
+                    </div>
+                  </div>
+                  <div className="regulatory-card">
+                    <div className="card-number">08</div>
+                    <div className="card-content">
+                      <div className="regulatory-acronym">NLRB</div>
+                      <div className="regulatory-name">National Labor Relations Board</div>
+                    </div>
+                  </div>
+                  <div className="regulatory-card">
+                    <div className="card-number">09</div>
+                    <div className="card-content">
+                      <div className="regulatory-acronym">BLM</div>
+                      <div className="regulatory-name">Bureau of Land Management</div>
+                    </div>
+                  </div>
+                  <div className="regulatory-card">
+                    <div className="card-number">10</div>
+                    <div className="card-content">
+                      <div className="regulatory-acronym">BOEM</div>
+                      <div className="regulatory-name">Bureau of Ocean Energy Management</div>
+                    </div>
+                  </div>
+                  <div className="regulatory-card">
+                    <div className="card-number">11</div>
+                    <div className="card-content">
+                      <div className="regulatory-acronym">BSEE</div>
+                      <div className="regulatory-name">Bureau of Safety and Environmental Enforcement</div>
+                    </div>
+                  </div>
+                  <div className="regulatory-card">
+                    <div className="card-number">12</div>
+                    <div className="card-content">
+                      <div className="regulatory-acronym">PHMSA</div>
+                      <div className="regulatory-name">Pipeline and Hazardous Material Safety Administration</div>
+                    </div>
+                  </div>
+                  <div className="regulatory-card featured">
+                    <div className="card-number">13</div>
+                    <div className="card-content">
+                      <div className="regulatory-acronym">DOE</div>
+                      <div className="regulatory-name">US Department of Energy</div>
                     </div>
                   </div>
                 </div>

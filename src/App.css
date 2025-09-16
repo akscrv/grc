@@ -8,7 +8,7 @@
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   line-height: 1.6;
-  color: #333;
+  color: #1e293b;
   background-color: #ffffff;
 }
 
@@ -152,7 +152,7 @@ body {
 
 .hero-subtitle {
   font-size: 1.1rem;
-  color: #64748b;
+  color: #ffffff;
   margin-bottom: 1.5rem;
   line-height: 1.6;
 }
@@ -284,6 +284,29 @@ body {
   border-radius: 12px;
   text-align: center;
   border: 1px solid #e2e8f0;
+  animation: gentleFloat 6s ease-in-out infinite;
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.dashboard-card:hover {
+  animation-play-state: paused;
+  transform: scale(1.05);
+}
+
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: rotate(0deg) translateY(0px);
+  }
+  25% {
+    transform: rotate(1deg) translateY(-2px);
+  }
+  50% {
+    transform: rotate(0deg) translateY(-4px);
+  }
+  75% {
+    transform: rotate(-1deg) translateY(-2px);
+  }
 }
 
 .card-icon {
@@ -291,6 +314,16 @@ body {
   height: 32px;
   margin: 0 auto 1rem;
   color: #3b82f6;
+  animation: iconRotate 4s linear infinite;
+}
+
+@keyframes iconRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .card-title {
@@ -455,12 +488,12 @@ body {
 }
 
 .feature-card {
-  background: #f8fafc;
+  background: white;
   padding: 1.5rem;
   border-radius: 12px;
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 2px solid #e2e8f0;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
@@ -497,6 +530,269 @@ body {
 /* Certifications Section */
 .certifications-section {
   padding: 1rem 0;
+}
+
+.certifications-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.certifications-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.1"/><circle cx="90" cy="40" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.3;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.badge-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.certifications-hero .hero-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.certifications-hero .hero-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.frameworks-showcase, .regulatory-showcase {
+  margin-bottom: 3rem;
+}
+
+.showcase-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.showcase-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.showcase-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  border-radius: 2px;
+}
+
+.showcase-subtitle {
+  font-size: 1rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.frameworks-masonry {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.framework-card {
+  position: relative;
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 2px solid #e2e8f0;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.framework-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+}
+
+.framework-card.primary::before {
+  background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+}
+
+.framework-card.secondary::before {
+  background: linear-gradient(90deg, #10b981, #059669);
+}
+
+.framework-card.tertiary::before {
+  background: linear-gradient(90deg, #f59e0b, #d97706);
+}
+
+.card-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.framework-card:hover .card-glow {
+  opacity: 1;
+}
+
+.framework-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.framework-icon {
+  width: 48px;
+  height: 48px;
+  color: #3b82f6;
+  margin: 0 auto 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.framework-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.framework-card p {
+  font-size: 0.875rem;
+  color: #475569;
+  position: relative;
+  z-index: 1;
+}
+
+.regulatory-masonry {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Center the last card when it's alone in a row */
+.regulatory-masonry .regulatory-card:nth-child(13) {
+  grid-column: 1 / -1;
+  justify-self: center;
+  max-width: 300px;
+}
+
+.regulatory-card {
+  position: relative;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 2px solid #e2e8f0;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.regulatory-card.featured {
+  background: white;
+  border: 2px solid #e2e8f0;
+}
+
+.regulatory-card.featured::before {
+  display: none;
+}
+
+.card-number {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 32px;
+  height: 32px;
+  background: #3b82f6;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.regulatory-card.featured .card-number {
+  background: #3b82f6;
+}
+
+.card-content {
+  padding-right: 3rem;
+}
+
+.regulatory-acronym {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #3b82f6;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.regulatory-card.featured .regulatory-acronym {
+  color: #3b82f6;
+}
+
+.regulatory-name {
+  font-size: 0.875rem;
+  color: #475569;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.regulatory-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 .certifications-grid {
@@ -561,9 +857,11 @@ body {
 .benefit-item {
   text-align: center;
   padding: 1rem;
-  background: #f8fafc;
-  border-radius: 8px;
-  border: 1px solid #e5e7eb;
+  background: white;
+  border-radius: 12px;
+  border: 2px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .benefit-icon {
@@ -581,8 +879,14 @@ body {
 }
 
 .benefit-item p {
-  color: #64748b;
+  color: #475569;
   font-size: 0.8rem;
+}
+
+.benefit-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border-color: #3b82f6;
 }
 
 /* Industries Section */
@@ -592,41 +896,52 @@ body {
 
 .industries-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-top: 1.5rem;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .industry-card {
-  background: #f8fafc;
-  padding: 1.5rem;
-  border-radius: 12px;
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  border: 1px solid #e5e7eb;
-  transition: transform 0.2s;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 2px solid #e2e8f0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .industry-card:hover {
   transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border-color: #3b82f6;
 }
 
 .industry-icon {
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   color: #3b82f6;
-  margin: 0 auto 0.75rem;
+  margin: 0 auto 1rem;
+  padding: 12px;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2);
 }
 
 .industry-card h3 {
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #1e293b;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .industry-card p {
-  color: #64748b;
+  color: #475569;
   font-size: 0.8rem;
   margin-bottom: 0.75rem;
 }
@@ -638,11 +953,12 @@ body {
 }
 
 .industry-features li {
-  color: #64748b;
-  font-size: 0.75rem;
-  padding: 0.2rem 0;
+  color: #475569;
+  font-size: 0.8rem;
+  padding: 0.3rem 0;
   position: relative;
-  padding-left: 0.75rem;
+  padding-left: 1rem;
+  font-weight: 500;
 }
 
 .industry-features li::before {
@@ -804,6 +1120,40 @@ body {
     gap: 1rem;
   }
   
+  .frameworks-masonry {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .regulatory-masonry {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .framework-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .regulatory-card {
+    padding: 1rem;
+  }
+  
+  .regulatory-acronym {
+    font-size: 1.25rem;
+  }
+  
+  .regulatory-name {
+    font-size: 0.8rem;
+  }
+  
+  .certifications-hero .hero-title {
+    font-size: 2rem;
+  }
+  
+  .showcase-title {
+    font-size: 1.5rem;
+  }
+  
   .cta-buttons {
     flex-direction: column;
     align-items: center;
@@ -844,5 +1194,45 @@ body {
   
   .main-content {
     padding: 5rem 0 1rem;
+  }
+  
+  .frameworks-masonry {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .regulatory-masonry {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .framework-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .regulatory-card {
+    padding: 1rem;
+  }
+  
+  .regulatory-acronym {
+    font-size: 1.25rem;
+  }
+  
+  .regulatory-name {
+    font-size: 0.8rem;
+  }
+  
+  .certifications-hero .hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .showcase-title {
+    font-size: 1.25rem;
+  }
+  
+  .card-number {
+    width: 28px;
+    height: 28px;
+    font-size: 0.7rem;
   }
 }
