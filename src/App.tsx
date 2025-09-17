@@ -6,7 +6,6 @@ import {
   FileText, 
   Shield, 
   Workflow, 
-  Database, 
   Eye,
   Clock,
   DollarSign,
@@ -23,7 +22,6 @@ import {
   Star,
   Award,
   Users,
-  Settings,
   Users2,
   Timer
 } from 'lucide-react';
