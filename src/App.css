@@ -15,7 +15,7 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 2rem;
 }
 
 /* Navigation */
@@ -34,7 +34,7 @@ body {
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -109,7 +109,7 @@ body {
 
 /* Main Content Area */
 .main-content {
-  padding: 6rem 0 2rem;
+  padding: 6rem 1rem 2rem;
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   min-height: calc(100vh - 80px);
 }
@@ -373,7 +373,7 @@ body {
 /* Challenge Section */
 .challenge-section {
   margin-top: 2rem;
-  padding: 1.5rem 0;
+  padding: 1.5rem 10px;
   background: white;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -418,7 +418,7 @@ body {
 /* Solution Section */
 .solution-section {
   margin-top: 2rem;
-  padding: 1.5rem 0;
+  padding: 1.5rem 10px;
   background: white;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -474,7 +474,7 @@ body {
 
 .benefits-section {
   margin-top: 2rem;
-  padding: 1.5rem 0;
+  padding: 1.5rem 10px;
   background: white;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -1172,6 +1172,14 @@ body {
 }
 
 @media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .nav-container {
+    padding: 0 1rem;
+  }
+  
   .hero-title {
     font-size: 1.8rem;
   }
@@ -1193,7 +1201,7 @@ body {
   }
   
   .main-content {
-    padding: 5rem 0 1rem;
+    padding: 5rem 0.5rem 1rem;
   }
   
   .frameworks-masonry {
