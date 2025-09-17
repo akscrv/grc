@@ -76,10 +76,10 @@ function App() {
           <div className="hero-content">
             <div className="hero-text">
               <h1 className="hero-title">
-                AI-Native Compliance & Audit Automation for Energy & Gas
+              AI-Powered Compliance & Audits for Oil & Gas Leaders
               </h1>
               <p className="hero-subtitle">
-                Automate up to 70% of compliance tasks, reduce audit costs, and stay ahead of regulations with AI.
+              Transform governance, risk, and compliance management with real-time automation, AI policy editing, and unified dashboards tailored to the energy sector.
               </p>
               <div className="hero-buttons">
                 <button className="btn-primary">
@@ -134,7 +134,7 @@ function App() {
           </div>
 
               <div className="challenge-section">
-            <h2 className="section-title">Why Compliance in Energy is Broken</h2>
+            <h2 className="section-title">Why Compliance in Oil & Gas is Broken</h2>
           <div className="challenge-grid">
             <div className="challenge-item">
               <AlertTriangle className="challenge-icon" />
@@ -155,7 +155,7 @@ function App() {
         </div>
 
               <div className="solution-section">
-              <h2 className="section-title">Your AI Co-Pilot for Energy Compliance</h2>
+              <h2 className="section-title">Your AI Co-Pilot for Oil & Gas Compliance</h2>
               <p className="section-subtitle">
                 Centralize, automate, and predict compliance risks with AI.
               </p>
@@ -196,7 +196,7 @@ function App() {
           {activeSection === 'features' && (
             <div className="section-content features-section">
           <div className="section-header">
-            <h2 className="section-title">Powerful Features for Energy Compliance</h2>
+            <h2 className="section-title">Powerful Features for Oil & Gas Compliance</h2>
             <p className="section-subtitle">
               Everything you need to streamline compliance and reduce risk
             </p>
@@ -207,7 +207,7 @@ function App() {
                 <Brain />
               </div>
               <h3>DocPilot AI</h3>
-              <p>Upload & edit energy compliance documents with AI-powered assistance and automated formatting.</p>
+              <p>Upload & edit Oil & Gas compliance documents with AI-powered assistance and automated formatting.</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">
@@ -289,7 +289,7 @@ function App() {
                 </div>
                 <h1 className="hero-title">Certifications & Regulatory Compliance</h1>
                 <p className="hero-subtitle">
-                  Comprehensive coverage of energy industry standards and regulations
+                  Comprehensive coverage of Oil & Gas industry standards and regulations
                 </p>
               </div>
 
@@ -311,24 +311,9 @@ function App() {
                     <h3>ISO Standards</h3>
                     <p>International Standards</p>
                   </div>
-                  <div className="framework-card tertiary">
-                    <div className="card-glow"></div>
-                    <Database className="framework-icon" />
-                    <h3>SOC Compliance</h3>
-                    <p>Service Organization Control</p>
-                  </div>
-                  <div className="framework-card primary">
-                    <div className="card-glow"></div>
-                    <Settings className="framework-icon" />
-                    <h3>SOX Requirements</h3>
-                    <p>Sarbanes-Oxley Act</p>
-                  </div>
-                  <div className="framework-card secondary">
-                    <div className="card-glow"></div>
-                    <Users2 className="framework-icon" />
-                    <h3>GDPR Protection</h3>
-                    <p>Data Privacy Regulation</p>
-                  </div>
+                  
+                  
+                  
                   <div className="framework-card tertiary">
                     <div className="card-glow"></div>
                     <Timer className="framework-icon" />
@@ -444,9 +429,9 @@ function App() {
           {activeSection === 'industries' && (
             <div className="section-content industries-section">
           <div className="section-header">
-            <h2 className="section-title">Built for the Energy Industry</h2>
+            <h2 className="section-title">Built for the Oil & Gas Industry</h2>
             <p className="section-subtitle">
-              Trusted by leading companies across the energy sector
+              Trusted by leading companies across the Oil & Gas sector
             </p>
           </div>
           <div className="industries-grid">
@@ -463,10 +448,10 @@ function App() {
             </div>
             <div className="industry-card">
               <Wind className="industry-icon" />
-              <h3>Renewable Energy</h3>
-              <p>Solar, wind, and hydroelectric facilities</p>
+              <h3>Oil & Gas Services</h3>
+              <p>Upstream, midstream, and downstream operations</p>
                   <ul className="industry-features">
-                    <li>Grid Integration Standards</li>
+                    <li>Pipeline Operations</li>
                     <li>Environmental Impact Assessment</li>
                     <li>Safety & Maintenance Protocols</li>
                     <li>Regulatory Reporting</li>
@@ -517,7 +502,7 @@ function App() {
           <div className="cta-content">
             <h2 className="cta-title">Future-proof your compliance with AI</h2>
             <p className="cta-subtitle">
-              Join leading energy companies who trust COMPLYGRID for their compliance needs
+              Join leading Oil & Gas companies who trust COMPLYGRID for their compliance needs
             </p>
             <div className="cta-buttons">
               <button className="btn-primary large">
