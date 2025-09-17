@@ -140,6 +140,9 @@ body {
   gap: 2rem;
   align-items: center;
   margin-bottom: 2rem;
+  background: #4444445c;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .hero-title {
